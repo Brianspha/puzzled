@@ -1,0 +1,41 @@
+{
+  "abiDefinition": [],
+  "deployedAddress": "0xc08565a51ad6946285D5b79A113c0cAF5b0733f9",
+  "className": "SafeMath",
+  "args": [],
+  "gas": 77158,
+  "gasPrice": "20000000000",
+  "silent": false,
+  "track": true,
+  "deploy": true,
+  "realRuntimeBytecode": "73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72305820db928858f4b1e24163",
+  "realArgs": [],
+  "code": "60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72305820db928858f4b1e24163f0b78c79fdb3d492f3411c4c0b12753090a3e0ce0a57f064736f6c634300050a0032",
+  "runtimeBytecode": "73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a72305820db928858f4b1e24163f0b78c79fdb3d492f3411c4c0b12753090a3e0ce0a57f064736f6c634300050a0032",
+  "linkReferences": {},
+  "swarmHash": "f0b78c79fdb3d492f3411c4c0b12753090a3e0ce0a57f064736f6c634300050a",
+  "gasEstimates": {
+    "creation": {
+      "codeDepositCost": "17000",
+      "executionCost": "94",
+      "totalCost": "17094"
+    },
+    "internal": {
+      "add(uint256,uint256)": "infinite",
+      "div(uint256,uint256)": "infinite",
+      "div(uint256,uint256,string memory)": "infinite",
+      "mod(uint256,uint256)": "infinite",
+      "mod(uint256,uint256,string memory)": "infinite",
+      "mul(uint256,uint256)": "infinite",
+      "sub(uint256,uint256)": "infinite",
+      "sub(uint256,uint256,string memory)": "infinite"
+    }
+  },
+  "functionHashes": {},
+  "filename": "/Users/powerbite/Documents/Github/puzzled/contracts/.embark/contracts/SafeMath.sol",
+  "originalFilename": "contracts/SafeMath.sol",
+  "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/SafeMath.sol",
+  "type": "file",
+  "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0",
+  "transactionHash": "0x2174016f427a2e5f4c7284260c845416ae25817f5671922b842e96dc1a715e19"
+}

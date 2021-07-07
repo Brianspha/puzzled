@@ -8,17 +8,42 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "bignumber.js": "^9.0.1",
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "file-saver": "^2.0.5",
+    "getusermedia": "^2.0.1",
+    "js-loading-overlay": "^1.2.0",
+    "screen-record": "^1.0.1",
+    "skynet-js": "^3.0.2",
+    "streamsaver": "^2.0.5",
+    "sweetalert2": "^11.0.18",
+    "tiny-timer": "^1.6.0",
+    "vue": "^2.6.11",
+    "vue-media-recorder": "^0.1.25",
+    "vue-router": "^3.2.0",
+    "vue-text-transition": "^1.0.19",
+    "vuetify": "^2.4.0",
+    "vuex": "^3.0.1",
+    "vuex-persistedstate": "^2.5.4",
+    "web3": "^1.4.0",
+    "web3-utils": "^1.4.0",
+    "zimjs": "^11.4.2"
   },
   "devDependencies": {
+    "@mdi/font": "^5.9.55",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-store": "~0.0.7",
+    "vue-cli-plugin-vuetify": "~2.4.1",
+    "vue-template-compiler": "^2.6.11",
+    "vuetify-loader": "^1.7.0"
   },
   "eslintConfig": {
     "root": true,

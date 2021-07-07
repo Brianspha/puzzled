@@ -1,0 +1,29 @@
+{
+  "abiDefinition": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "className": "Context",
+  "args": [],
+  "gas": "auto",
+  "silent": false,
+  "track": true,
+  "deploy": false,
+  "realRuntimeBytecode": "",
+  "realArgs": [],
+  "code": "",
+  "runtimeBytecode": "",
+  "linkReferences": {},
+  "swarmHash": "",
+  "gasEstimates": null,
+  "functionHashes": {},
+  "filename": "/Users/powerbite/Documents/Github/puzzled/contracts/.embark/contracts/Context.sol",
+  "originalFilename": "contracts/Context.sol",
+  "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/Context.sol",
+  "type": "file",
+  "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0"
+}

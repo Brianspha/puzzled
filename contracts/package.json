@@ -1,0 +1,25 @@
+{
+  "name": "contracts",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "embark test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^2.5.0",
+    "@openzeppelin/contracts-ethereum-package": "^2.5.0",
+    "@openzeppelin/upgrades": "^2.8.0",
+    "dotenv": "^8.2.0",
+    "embark": "^6.0.0",
+    "embark-geth": "^6.0.0",
+    "embarkjs": "^6.0.0",
+    "embarkjs-ens": "^6.0.0",
+    "embarkjs-web3": "^6.0.0"
+  },
+  "dependencies": {
+    "web3-utils": "^1.4.0"
+  }
+}
