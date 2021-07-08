@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Amazeng</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css"
+    />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+
+    <section class="game">
+      <section class="screen screen-intro active-screen">
+        <h1 class="title" style="color: lightgray;">Amazeng</h1>
+        <div class="button button-newgame">New Game</div>
+        <div  class="button button-leaderboard">Leaderboard</div>
+        <div  class="button button-about">About</div>
+        <div class="button button-credits">Credits</div>
+      </section>
+
+      <section class="screen screen-leaderboard">
+        <!-- partial:index.partial.html -->
+        <div class="leaderboard">
+          <h2>Amazeng <small>( Token Collectors Leaderboard )</small></h2>
+          <ol id="list"></ol>
+          <p><small>Amazeng Token Collectors</small></p>
+        </div>
+        <!-- partial -->
+        <a href="#" class="button button-game-menu blackText">Back to Menu</a>
+      </section>
+      <section class="screen screen-about">
+        <h1>How to Play</h1>
+        <p>To Play th Simply traverse through the different level mazes using rodger the alien
+        </br> As a reward you collect coins which rodger can use  and are then streamed to you whenever you feel like you have had enough playtime
+        The duration of the stream is determined by the time attached to each coin when you collect this is also shown at the top of the screen.
+        You have a limited amount of time to complete a level maze so the coins you collect also add time to your exisiting level time which is carried over throughout all levels
+
+        </p>
+         <h1>Binance Smart Chain</h1>
+        To play the game you will need to ensure that you have setup metamask accordingly as stipulated on the <a href="https://binancex.dev/blog.html?p=making-the-move-from-ethereum-to-bsc">Binance Website</a>
+        You will also need some test net eth to get the Amazeng tokens streamed to your account testnet eth for the Binance smartchain network is available here <a href="https://testnet.binance.org/faucet-smart">testnet faucet</a> 
+      </br><b>Ensure that you select the *Give me BNB option* </b>
+      </br>
+      </br>
+        <a href="#" class="button button-game-menu blackText">Back to Menu</a>
+      </section>
+      <section class="screen screen-credits">
+        <h3>Developed by <a href="https://github.com/Brianspha?tab=repositories">brianspha</a></h3>
+        <a href="#" class="button button-game-menu blackText">Back to Menu</a>
+      </section>
+    </section>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

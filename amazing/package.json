@@ -1,0 +1,64 @@
+{
+  "name": "amazing",
+  "version": "0.0.1",
+  "description": "",
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  },
+  "scripts": {
+    "test": "embark test",
+    "start": "cross-env && embark reset && embark run --nodashboard",
+    "binance": "cross-env && embark reset && embark build binance",
+    "matic": "cross-env && embark reset &&  embark build  matic"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^2.5.0",
+    "@openzeppelin/contracts-ethereum-package": "^2.5.0",
+    "@openzeppelin/upgrades": "^2.8.0",
+    "deepmerge": "^4.2.2",
+    "embark": "^6.0.0",
+    "embark-basic-pipeline": "^6.0.0",
+    "embark-geth": "^6.0.0",
+    "embark-profiler": "^6.0.0",
+    "embarkjs": "^6.0.0",
+    "embarkjs-web3": "^6.0.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0"
+  },
+  "dependencies": {
+    "@binance-chain/javascript-sdk": "^4.1.1",
+    "@maticnetwork/maticjs": "^2.0.15",
+    "@nebulous/skynet": "^2.0.1",
+    "axios": "^0.21.0",
+    "bignumber.js": "^9.0.1",
+    "bs-stepper": "^1.7.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^8.2.0",
+    "dotenv-webpack": "^6.0.0",
+    "env-cmd": "^10.1.0",
+    "file-saver": "^2.0.5",
+    "flatpickr": "^4.6.6",
+    "fs": "^0.0.1-security",
+    "ganache-cli": "^6.12.1",
+    "jquery": "^3.5.1",
+    "js-loading-overlay": "^1.2.0",
+    "micromodal": "^0.4.6",
+    "modal-vanilla": "^0.9.0",
+    "record-screen": "^3.18.0",
+    "recordrtc": "^5.6.1",
+    "screen-capture-recorder": "^3.0.3",
+    "skynet-js": "^2.9.0",
+    "streamsaver": "^2.0.5",
+    "sweetalert2": "^10.12.4",
+    "tiny-timer": "^1.5.1",
+    "vue": "^2.6.12",
+    "vuetify": "^2.3.21",
+    "web3-utils": "^1.3.0"
+  }
+}

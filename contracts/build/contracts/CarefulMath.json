@@ -1,0 +1,38 @@
+{
+  "abiDefinition": [],
+  "deployedAddress": "0xF3af4cFC2192851Ad334d298Bf2E5a3C81976996",
+  "className": "CarefulMath",
+  "args": [],
+  "gas": 71311,
+  "gasPrice": "20000000000",
+  "silent": false,
+  "track": true,
+  "deploy": true,
+  "realRuntimeBytecode": "6080604052600080fdfea265627a7a72305820d4245c93c85524a72f",
+  "realArgs": [],
+  "code": "6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72305820d4245c93c85524a72ffb031552eedbc466aa535d36cab3583c153e13707047d564736f6c634300050a0032",
+  "runtimeBytecode": "6080604052600080fdfea265627a7a72305820d4245c93c85524a72ffb031552eedbc466aa535d36cab3583c153e13707047d564736f6c634300050a0032",
+  "linkReferences": {},
+  "swarmHash": "fb031552eedbc466aa535d36cab3583c153e13707047d564736f6c634300050a",
+  "gasEstimates": {
+    "creation": {
+      "codeDepositCost": "12400",
+      "executionCost": "66",
+      "totalCost": "12466"
+    },
+    "internal": {
+      "addThenSubUInt(uint256,uint256,uint256)": "infinite",
+      "addUInt(uint256,uint256)": "infinite",
+      "divUInt(uint256,uint256)": "infinite",
+      "mulUInt(uint256,uint256)": "infinite",
+      "subUInt(uint256,uint256)": "infinite"
+    }
+  },
+  "functionHashes": {},
+  "filename": "/Users/powerbite/Documents/Github/puzzled/contracts/.embark/contracts/shared-contracts/compound/CarefulMath.sol",
+  "originalFilename": "contracts/shared-contracts/compound/CarefulMath.sol",
+  "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/shared-contracts/compound/CarefulMath.sol",
+  "type": "file",
+  "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0",
+  "transactionHash": "0xfe2c450160c0b8cba0ed7a2aefe4ced8a7f20c313c388499a2e70a506bead011"
+}

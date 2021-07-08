@@ -1,0 +1,365 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#mazeContainer {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  top: 75px;
+  opacity: 0;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: auto;
+}
+#mazeContainer #mazeCanvas {
+  margin: 0;
+  display: block;
+  border: solid 1px black;
+}
+
+#button {
+  -webkit-transition-property: background-color opacity;
+  transition-property: background-color opacity;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 30px;
+  width: 150px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input:hover,
+select:hover {
+}
+input:active,
+select:active {
+  background-color: black;
+}
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.custom-select {
+  display: inline-block;
+}
+.custom-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAh0lEQVQ4T93TMQrCUAzG8V9x8QziiYSuXdzFC7h4AcELOPQAdXYovZCHEATlgQV5GFTe1ozJlz/kS1IpjKqw3wQBVyy++JI0y1GTe7DCBbMAckeNIQKk/BanALBB+16LtnDELoMcsM/BESDlz2heDR3WePwKSLo5eoxz3z6NNcFD+vu3ij14Aqz/DxGbKB7CAAAAAElFTkSuQmCC");
+  background-repeat: no-repeat;
+  background-position: 125px center;
+}
+
+#Message-Container {
+  visibility: hidden;
+  color: white;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+#Message-Container #message {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+
+#page {
+  font-family: "Segoe UI", Arial, sans-serif;
+  text-align: center;
+  height: auto;
+  width: auto;
+  margin: auto;
+}
+#page #menu {
+  margin: auto;
+  padding: 10px;
+  height: 65px;
+  box-sizing: border-box;
+}
+#page #menu h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+#page #view {
+  position: absolute;
+  top: 65px;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.border {
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+#gradient {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background: linear-gradient(-45deg, #5c5959, #646161, #9e9fa0, #6c6e6e);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+  input,
+  select {
+    width: 120px;
+  }
+}
+
+/*Main styling Start*/
+.sum {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  display: flex;
+  border: solid 4px #fff;
+  border-radius: 10px;
+  font-size: 40rem;
+  font-weight: bold;
+  color: #fff;
+  transform: translateX(-50%) skewX(-15deg);
+}
+.sum .text {
+  flex: 1;
+  padding: 10px;
+  text-align: end;
+  background-color: var(--common-color1);
+  border-radius: 5px 0 0 5px;
+}
+.sum::after {
+  content: counter(corona) "/100";
+  flex: 1;
+  padding: 10px;
+  background-color: var(--common-color2);
+  border-radius: 0 5px 5px 0;
+}
+
+.count-down {
+  position: absolute;
+  z-index: 22;
+  left: 20px;
+  top: 20px;
+  font-size: 40rem;
+}
+.count-down .icon {
+  margin-right: 20px;
+}
+.count-down .count {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+}
+.count-down .count::before,
+.count-down .count::after {
+  animation: countdown 100s step-end 1 forwards;
+  content: "";
+  width: 1ch;
+}
+.count-down .count::after {
+  animation-duration: 10s;
+  animation-iteration-count: 10;
+}
+@media (max-width: 500px) {
+  .count-down {
+    top: auto;
+    bottom: 20px;
+  }
+}
+.count-down {
+  position: absolute;
+  z-index: 22;
+  left: 20px;
+  top: 20px;
+  font-size: 40rem;
+}
+.count-down .icon {
+  margin-right: 20px;
+}
+.count-down .count {
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+}
+.count-down .count::before,
+.count-down .count::after {
+  animation: countdown 100s step-end 1 forwards;
+  content: "";
+  width: 1ch;
+}
+.count-down .count::after {
+  animation-duration: 10s;
+  animation-iteration-count: 10;
+}
+@media (max-width: 500px) {
+  .count-down {
+    top: auto;
+    bottom: 20px;
+  }
+}
+
+.timer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 10px;
+  background-color: #fff;
+  border: solid 1px #333;
+}
+.timer::before {
+  content: "";
+  width: 0px;
+  height: 100%;
+  display: block;
+  background-color: var(--common-color2);
+  animation: timer 100s linear 0s;
+  animation-fill-mode: forwards;
+}
+@media (max-width: 500px) {
+  .timer {
+    top: auto;
+    bottom: 0;
+  }
+}
+
+@keyframes countdown {
+  0% {
+    content: "9";
+  }
+  10% {
+    content: "8";
+  }
+  20% {
+    content: "7";
+  }
+  30% {
+    content: "6";
+  }
+  40% {
+    content: "5";
+  }
+  50% {
+    content: "4";
+  }
+  60% {
+    content: "3";
+  }
+  70% {
+    content: "2";
+  }
+  80% {
+    content: "1";
+  }
+  90%,
+  100% {
+    content: "0";
+  }
+}
+@keyframes timer {
+  0% {
+    width: 3%;
+  }
+  85% {
+    width: 85%;
+    background-color: var(--common-color2);
+  }
+  90% {
+    width: 90%;
+    background-color: var(--common-color1);
+  }
+  100% {
+    width: 100%;
+    background-color: var(--common-color1);
+  }
+}
+
+/***** Game Frame *****/
+.game-frame {
+  display: block;
+}
+.show{
+  display: block;
+}
+.hidden{
+  display: none;
+}
+.canvasBackground{
+  background-color: white;
+  fill: white;
+  color: white;
+}
+/*Main Styling end*/

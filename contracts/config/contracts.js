@@ -3,6 +3,7 @@ require("dotenv").config({
   encoding: "utf8",
 });
 const bigNumber = require("bignumber.js");
+let initialAmount = new bigNumber(991112121212111231190990211212).toFixed();
 module.exports = {
   // default applies to all environments
   default: {
@@ -34,42 +35,172 @@ module.exports = {
     // filteredFields: [],
 
     deploy: {
+      CTokenManager: {
+        args: [],
+      },
+      Sablier: {
+        deps: ["ERC20"],
+        args: ["$CTokenManager"],
+      },
+      Amazeng: {
+        deps: ["ERC20", "Sablier"],
+      },
       ERC20: {
-        args: [
-          "PT",
-          "PToken",
-          18,
-          new bigNumber(99111110000000000000000000000000000).toFixed(),
-        ],
+        args: ["PT", "PToken", 18, initialAmount],
       },
       TournamentContract: {
-        args: [
-          "$ERC20"
-        ],
-        deps: ['ERC20'],
-        onDeploy: async ({ contracts, web3, logger }) => {
-          await contracts.ERC20.methods
-            .approve(
-              contracts.TournamentContract.options.address,
+        args: ["$ERC20"],
+        deps: ["ERC20", "Amazeng"],
+      },
+    },
+    afterDeploy: async (deps) => {
+      console.log("deps.contracts.TournamentContract.options.address: ",deps.contracts.TournamentContract.options.address)
+      await deps.contracts.ERC20.methods
+        .approve(
+          deps.contracts.TournamentContract.options.address,
+          new bigNumber(
+            new bigNumber(
               new bigNumber(991112121212111231190990211212).toFixed()
-            )
-            .send({
-              gas: 800000,
-            });
-          await contracts.ERC20.methods
-            .transfer(
-              contracts.TournamentContract.options.address,
+            ).dividedBy(2)
+          ).toFixed()
+        )
+        .send({
+          gas: 800000,
+        });
+      await deps.contracts.ERC20.methods
+        .transfer(
+          deps.contracts.TournamentContract.options.address,
+          new bigNumber(
+            new bigNumber(
               new bigNumber(991112121212111231190990211212).toFixed()
-            )
-            .send({
-              gas: 800000,
-            });
-          console.log("deployed contract!!!");
-        }
-      }
+            ).dividedBy(2)
+          ).toFixed()
+        )
+        .send({
+          gas: 800000,
+        });
+      console.log("deployed contract!!!");
+      console.log("contracts: ", web3.eth.defaultAccount);
+      await deps.contracts.Amazeng.methods
+        .init(
+          deps.contracts.ERC20.options.address,
+          deps.contracts.Sablier.options.address
+        )
+        .send({
+          gas: 800000,
+        });
+      await deps.contracts.ERC20.methods
+        .approve(
+          deps.contracts.Amazeng.options.address,
+          new bigNumber(
+            new bigNumber(
+              new bigNumber(991112121212111231190990211212).toFixed()
+            ).dividedBy(2)
+          ).toFixed()
+        )
+        .send({
+          gas: 800000,
+        });
+      await deps.contracts.ERC20.methods
+        .transfer(
+          deps.contracts.Amazeng.options.address,
+          new bigNumber(
+            new bigNumber(
+              new bigNumber(991112121212111231190990211212).toFixed()
+            ).dividedBy(2)
+          ).toFixed()
+        )
+        .send({
+          gas: 800000,
+        });
+      console.log("approved Amazeng contract...");
     },
   },
-
+  matic: {
+    gas: "6000000",
+    strategy: "explicit",
+    deploy: {
+      CTokenManager: {
+        args: [],
+      },
+      Sablier: {
+        deps: ["ERC20"],
+        args: ["$CTokenManager"],
+      },
+      Amazeng: {
+        deps: ["ERC20", "Sablier"],
+      },
+      ERC20: {
+        args: ["PT", "PToken", 18, initialAmount],
+      },
+      TournamentContract: {
+        args: ["$ERC20"],
+        deps: ["ERC20", "Amazeng"],
+      },
+    },
+    afterDeploy: async (deps) => {
+      console.log("deps.contracts.TournamentContract.options.address: ",deps.contracts.TournamentContract.options.address)
+      await deps.contracts.ERC20.methods
+        .approve(
+          deps.contracts.TournamentContract.options.address,
+          new bigNumber(
+            new bigNumber(
+              new bigNumber(991112121212111231190990211212).toFixed()
+            ).dividedBy(2)
+          ).toFixed()
+        )
+        .send({
+          gas: 800000,
+        });
+      await deps.contracts.ERC20.methods
+        .transfer(
+          deps.contracts.TournamentContract.options.address,
+          new bigNumber(
+            new bigNumber(
+              new bigNumber(991112121212111231190990211212).toFixed()
+            ).dividedBy(2)
+          ).toFixed()
+        )
+        .send({
+          gas: 800000,
+        });
+      console.log("deployed contract!!!");
+      console.log("contracts: ", web3.eth.defaultAccount);
+      await deps.contracts.Amazeng.methods
+        .init(
+          deps.contracts.ERC20.options.address,
+          deps.contracts.Sablier.options.address
+        )
+        .send({
+          gas: 800000,
+        });
+      await deps.contracts.ERC20.methods
+        .approve(
+          deps.contracts.Amazeng.options.address,
+          new bigNumber(
+            new bigNumber(
+              new bigNumber(991112121212111231190990211212).toFixed()
+            ).dividedBy(2)
+          ).toFixed()
+        )
+        .send({
+          gas: 800000,
+        });
+      await deps.contracts.ERC20.methods
+        .transfer(
+          deps.contracts.Amazeng.options.address,
+          new bigNumber(
+            new bigNumber(
+              new bigNumber(991112121212111231190990211212).toFixed()
+            ).dividedBy(2)
+          ).toFixed()
+        )
+        .send({
+          gas: 800000,
+        });
+      console.log("approved Amazeng contract...");
+    },
+  },
   // default environment, merges with the settings in default
   // assumed to be the intended environment by `embark run`
   development: {

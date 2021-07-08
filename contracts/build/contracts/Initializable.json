@@ -1,0 +1,34 @@
+{
+  "abiDefinition": [],
+  "deployedAddress": "0x930a11282a7B284e667928d4AD8D4D010601b3E8",
+  "className": "Initializable",
+  "args": [],
+  "gas": 72823,
+  "gasPrice": "20000000000",
+  "silent": false,
+  "track": true,
+  "deploy": true,
+  "realRuntimeBytecode": "6080604052600080fdfea265627a7a7230582055523fe51eac535ad3",
+  "realArgs": [],
+  "code": "6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7230582055523fe51eac535ad31114959139c92212f97bf3b5e1dc9f2f848ad5d042afa664736f6c634300050a0032",
+  "runtimeBytecode": "6080604052600080fdfea265627a7a7230582055523fe51eac535ad31114959139c92212f97bf3b5e1dc9f2f848ad5d042afa664736f6c634300050a0032",
+  "linkReferences": {},
+  "swarmHash": "1114959139c92212f97bf3b5e1dc9f2f848ad5d042afa664736f6c634300050a",
+  "gasEstimates": {
+    "creation": {
+      "codeDepositCost": "12400",
+      "executionCost": "66",
+      "totalCost": "12466"
+    },
+    "internal": {
+      "isConstructor()": "infinite"
+    }
+  },
+  "functionHashes": {},
+  "filename": "/Users/powerbite/Documents/Github/puzzled/contracts/.embark/node_modules/@openzeppelin/upgrades/contracts/Initializable.sol",
+  "originalFilename": "contracts//Users/powerbite/Documents/Github/puzzled/contracts/.embark/node_modules/@openzeppelin/upgrades/contracts/Initializable.sol",
+  "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/.embark/node_modules/@openzeppelin/upgrades/contracts/Initializable.sol",
+  "type": "file",
+  "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0",
+  "transactionHash": "0x5c7466de53655fbc97ddb596a1563649bdc57b003efaa72088a27d5334407867"
+}

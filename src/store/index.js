@@ -11,7 +11,7 @@ const { publicKey, privateKey } = genKeyPairFromSeed(
 const bigNumber = require("bignumber.js");
 const client = new SkynetClient("https://siasky.net/");
 Vue.use(Vuex);
-localStorage.setItem("nextLevel",false);
+localStorage.setItem("nextLevel", false);
 /* eslint-disable no-new */
 const store = new Vuex.Store({
   plugins: [
@@ -22,12 +22,13 @@ const store = new Vuex.Store({
   ],
   modules: {},
   state: {
-    levelUp:false,
-    mediaRecorder:{},
-    tokenPurchaseDialog:false,
-    levelId:"",
+    levelUp: false,
+    mediaRecorder: {},
+    tokenPurchaseDialog: false,
+    levelId: "",
     levelJoinFee: new bigNumber(500 * 10 ** 18).toFixed(),
-    tournamentContract: require("../../contracts/embarkArtifacts/contracts/TournamentContract").default,
+    tournamentContract: require("../../contracts/embarkArtifacts/contracts/TournamentContract")
+      .default,
     token: ERC20,
     appSecret: process.env.VUE_APP_APP_SECRET,
     privateKey: privateKey,
@@ -51,7 +52,7 @@ const store = new Vuex.Store({
     connected: false,
     timer: new Timer(),
     revision: 1,
-    stream:{}
+    stream: {},
   },
   actions: {
     setUpRecorder() {
@@ -67,7 +68,10 @@ const store = new Vuex.Store({
           options = { mimeType: "video/webm;codecs=vp8" };
           mediaRecorder = new MediaRecorder(stream, options);
         } catch (e1) {
-          console.log("Unable to create MediaRecorder with options Object: ", e1);
+          console.log(
+            "Unable to create MediaRecorder with options Object: ",
+            e1
+          );
           try {
             options = { mimeType: "video/webm;codecs=daala" };
             mediaRecorder = new MediaRecorder(stream, options);
@@ -100,18 +104,14 @@ const store = new Vuex.Store({
       mediaRecorder.ondataavailable = handleDataAvailable;
       mediaRecorder.onstop = handleStop;
     },
-    saveData(context, data) {
-      client.db
-        .setJSON(
-          this.state.privateKey,
-          this.state.appSecret,
-          this.state.data,
-          this.state.revision
-        )
-        .then((results) => {
-          console.log("results: ", results);
-          this.state.isLoading = false;
-        });
+    saveData: async function(context, data) {
+      const results = await client.db.setJSON(
+        this.state.privateKey,
+        this.state.appSecret,
+        data,
+        BigInt(this.state.revision)
+      );
+      console.log("results: ", results);
     },
     stopTimer(context, _) {
       this.state.timer.stop();

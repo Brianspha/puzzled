@@ -22,9 +22,14 @@
                   :items="level1"
                   item-key="address"
                   class="elevation-1"
-                  :search="search"    :sort-desc="[true, true]"
-
+                  :search="search"
+                  :sort-desc="[true, true]"
                 >
+                  <template #item.replay="{ value }">
+                    <a :href="`${value}`" target="_blank">
+                      Click to watch
+                    </a>
+                  </template>
                   <template v-slot:top>
                     <v-text-field
                       :color="$store.state.primaryColor"
@@ -32,19 +37,6 @@
                       label="Search"
                       class="mx-4"
                     ></v-text-field>
-                  </template>
-                  <template v-slot:body.append>
-                    <tr>
-                      <td></td>
-                      <td>
-                        <v-text-field
-                          v-model="calories"
-                          type="number"
-                          label="Less than"
-                        ></v-text-field>
-                      </td>
-                      <td colspan="4"></td>
-                    </tr>
                   </template>
                 </v-data-table></div
             ></v-container>
@@ -59,8 +51,8 @@
                   :items="level2"
                   item-key="address"
                   class="elevation-1"
-                  :search="search"    :sort-desc="[true, true]"
-
+                  :search="search"
+                  :sort-desc="[true, true]"
                 >
                   <template v-slot:top>
                     <v-text-field
@@ -69,19 +61,6 @@
                       label="Search"
                       class="mx-4"
                     ></v-text-field>
-                  </template>
-                  <template v-slot:body.append>
-                    <tr>
-                      <td></td>
-                      <td>
-                        <v-text-field
-                          v-model="calories"
-                          type="number"
-                          label="Less than"
-                        ></v-text-field>
-                      </td>
-                      <td colspan="4"></td>
-                    </tr>
                   </template>
                 </v-data-table></div
             ></v-container>
@@ -96,8 +75,8 @@
                   :items="level3"
                   item-key="address"
                   class="elevation-1"
-                  :search="search"    :sort-desc="[true, true]"
-
+                  :search="search"
+                  :sort-desc="[true, true]"
                 >
                   <template v-slot:top>
                     <v-text-field
@@ -106,19 +85,6 @@
                       label="Search"
                       class="mx-4"
                     ></v-text-field>
-                  </template>
-                  <template v-slot:body.append>
-                    <tr>
-                      <td></td>
-                      <td>
-                        <v-text-field
-                          v-model="calories"
-                          type="number"
-                          label="Less than"
-                        ></v-text-field>
-                      </td>
-                      <td colspan="4"></td>
-                    </tr>
                   </template>
                 </v-data-table></div
             ></v-container>
@@ -133,8 +99,8 @@
                   :items="level4"
                   item-key="address"
                   class="elevation-1"
-                  :search="search"    :sort-desc="[true, true]"
-
+                  :search="search"
+                  :sort-desc="[true, true]"
                 >
                   <template v-slot:top>
                     <v-text-field
@@ -143,19 +109,6 @@
                       label="Search"
                       class="mx-4"
                     ></v-text-field>
-                  </template>
-                  <template v-slot:body.append>
-                    <tr>
-                      <td></td>
-                      <td>
-                        <v-text-field
-                          v-model="calories"
-                          type="number"
-                          label="Less than"
-                        ></v-text-field>
-                      </td>
-                      <td colspan="4"></td>
-                    </tr>
                   </template>
                 </v-data-table></div
             ></v-container>
@@ -170,8 +123,8 @@
                   :items="level5"
                   item-key="address"
                   class="elevation-1"
-                  :search="search"    :sort-desc="[true, true]"
-
+                  :search="search"
+                  :sort-desc="[true, true]"
                 >
                   <template v-slot:top>
                     <v-text-field
@@ -180,19 +133,6 @@
                       label="Search"
                       class="mx-4"
                     ></v-text-field>
-                  </template>
-                  <template v-slot:body.append>
-                    <tr>
-                      <td></td>
-                      <td>
-                        <v-text-field
-                          v-model="calories"
-                          type="number"
-                          label="Less than"
-                        ></v-text-field>
-                      </td>
-                      <td colspan="4"></td>
-                    </tr>
                   </template>
                 </v-data-table></div
             ></v-container>
@@ -207,8 +147,8 @@
                   :items="level6"
                   item-key="address"
                   class="elevation-1"
-                  :search="search"    :sort-desc="[true, true]"
-
+                  :search="search"
+                  :sort-desc="[true, true]"
                 >
                   <template v-slot:top>
                     <v-text-field
@@ -217,19 +157,6 @@
                       label="Search"
                       class="mx-4"
                     ></v-text-field>
-                  </template>
-                  <template v-slot:body.append>
-                    <tr>
-                      <td></td>
-                      <td>
-                        <v-text-field
-                          v-model="calories"
-                          type="number"
-                          label="Less than"
-                        ></v-text-field>
-                      </td>
-                      <td colspan="4"></td>
-                    </tr>
                   </template>
                 </v-data-table></div
             ></v-container>
@@ -255,498 +182,12 @@ export default {
   data() {
     return {
       search: "",
-      level1: [
-        {
-          address:
-            "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 20220),
-          score: Math.round(Math.random() * 2020200201111),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-      ],
-      level2: [
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-      ],
-      level3: [
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-      ],
-      level4: [
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-      ],
-      level5: [
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-      ],
-      level6: [
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-        {
-          address:
-            "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f" +
-            Math.round(Math.random() * 10),
-          time: Math.round(Math.random() * 202020020),
-          score: Math.round(Math.random() * 202020020),
-          level: 1,active:true
-        },
-      ],
+      level1: [],
+      level2: [],
+      level3: [],
+      level4: [],
+      level5: [],
+      level6: [],
       data: {
         scores: [],
       },
@@ -768,49 +209,51 @@ export default {
         },
         { text: "Time", value: "time" },
         { text: "Score", value: "score" },
-        { text: "Tournament Active", value: "active" },
+        { text: "Game Play Replay", value: "replay" },
       ];
     },
+  },
+  mounted: async function() {
+    this.$store.state.isLoading = true;
+    await this.init();
+    this.$store.state.isLoading = false;
   },
   methods: {
     getSkyData: async function() {
       var test = await this.$store.state.skyClient.db.getJSON(
-        publicKey,
-        appSecret
+        this.$store.state.publicKey,
+        this.$store.state.appSecret
       );
       return test;
     },
     init: async function() {
       var test = await this.getSkyData();
-      var tempData = { players: [] };
-      if (!test) {
+      console.log("player data: ", test);
+      if (!test.data) {
         this.$store.dispatch("warning", "No Players have played the game");
       } else {
-        var data = test.players;
+        var data = test.data.players;
         data.map((player) => {
-          var tempScores = player.scores;
-          tempScores.map((score) => {
-            switch (score.level) {
-              case 1:
-                this.level1.push(score);
-                break;
-              case 2:
-                this.level2.push(score);
-                break;
-              case 3:
-                this.level3.push(score);
-                break;
-              case 4:
-                this.level4.push(score);
-                break;
-              case 5:
-                this.level5.push(score);
-                break;
-              case 6:
-                this.level6.push(score);
-                break;
-            }
-          });
+          switch (player.level) {
+            case 1:
+              this.level1.push(player);
+              break;
+            case 2:
+              this.level2.push(player);
+              break;
+            case 3:
+              this.level3.push(player);
+              break;
+            case 4:
+              this.level4.push(player);
+              break;
+            case 5:
+              this.level5.push(player);
+              break;
+            case 6:
+              this.level6.push(player);
+              break;
+          }
         });
       }
     },

@@ -300,15 +300,15 @@
       "signature": "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"
     }
   ],
-  "deployedAddress": "0x57d2aeB988777580517117780039E3AAac49d672",
+  "deployedAddress": "0xF3e4bD640c06aa25F44163A13c9604a50749da04",
   "className": "ERC20",
   "args": [
     "PT",
     "PToken",
     18,
-    "99111110000000000000000000000000000"
+    "991112121212111200000000000000"
   ],
-  "gas": 813356,
+  "gas": 782116,
   "gasPrice": "20000000000",
   "silent": false,
   "track": true,
@@ -364,5 +364,5 @@
   "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/ERC20.sol",
   "type": "file",
   "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0",
-  "transactionHash": "0xdacebfef697dc10d6e2050137102e3bf0d2119a66f8b0070ebc71675898d1b7e"
+  "transactionHash": "0xfb38559a10bcd3da8b3dfcc5ef917651e0357da65276377ed601c8ee42745393"
 }

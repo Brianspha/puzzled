@@ -195,9 +195,9 @@
     "transfer(address,uint256)": "a9059cbb",
     "transferFrom(address,address,uint256)": "23b872dd"
   },
-  "filename": "/Users/powerbite/Documents/Github/puzzled/contracts/.embark/contracts/IERC20.sol",
-  "originalFilename": "contracts/IERC20.sol",
-  "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/IERC20.sol",
+  "filename": "/Users/powerbite/Documents/Github/puzzled/contracts/.embark/node_modules/@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol",
+  "originalFilename": "contracts//Users/powerbite/Documents/Github/puzzled/contracts/.embark/node_modules/@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol",
+  "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/.embark/node_modules/@openzeppelin/contracts-ethereum-package/contracts/token/ERC20/IERC20.sol",
   "type": "file",
   "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0"
 }

@@ -26,8 +26,8 @@ export default {
   methods: {
     getSkyData: async function() {
       var test = await this.$store.state.skyClient.db.getJSON(
-        publicKey,
-        appSecret
+        this.$store.state.publicKey,
+        this.$store.state.appSecret
       );
       return test;
     },
@@ -103,13 +103,47 @@ export default {
       fetch(test)
         .then((r) => r.blob())
         .then(async (blob) => {
+          var data = await _this.getSkyData();
+          console.log("skyData: ", data);
+          var tempData = { players: [] };
+
           this.$store.state.isLoading = true;
           var file_name = this.$store.state.userAddress + "recording.webm"; //e.g ueq6ge1j_name.pdf
           var file_object = new File([blob], file_name, { type: "video/webm" });
           const { skylink } = await this.$store.state.skyClient.uploadFile(
             file_object
           );
-          console.log("output file name: ", file_object, " skylink: ", skylink); //Output
+          console.log(
+            "output file name: ",
+            file_object,
+            " skylink: ",
+            "https://siasky.net/" + skylink.substring(4, skylink.length)
+          ); //Output
+          if (!test.data) {
+            data = {
+              players: [
+                {
+                  address: _this.$store.state.userAddress,
+                  level: this.$store.state.selectedLevel,
+                  time: _this.$store.state.time,
+                  score: _this.$store.state.currentScore,
+                  replay:
+                    "https://siasky.net/" +
+                    skylink.substring(4, skylink.length),
+                },
+              ],
+            };
+          } else {
+            data.data.players.add({
+              address: _this.$store.state.userAddress,
+              level: this.$store.state.selectedLevel,
+              time: _this.$store.state.time,
+              score: _this.$store.state.currentScore,
+              replay:
+                "https://siasky.net/" + skylink.substring(4, skylink.length),
+            });
+          }
+          await _this.$store.dispatch("saveData", data);
           _this.$store.state.tournamentContract.methods
             .completeLevel(
               _this.$store.state.levelId,
@@ -191,8 +225,8 @@ export default {
                             confirmButtonText: `To Menu`,
                           })
                           .then(async (result) => {
-                             localStorage.clear()
-                             window.location.href = "/";
+                            localStorage.clear();
+                            window.location.href = "/";
                           });
                         break;
                     }
@@ -208,7 +242,6 @@ export default {
                     _this.$store.state.isLoading = false;
                     _this.$store.state.difficultyDialog = false;
                     console.log("leveled");
-
                     localStorage.setItem(
                       "user" + _this.$store.state.userAddress,
                       JSON.stringify({
@@ -227,6 +260,8 @@ export default {
                     // _this.stage.update()
                   } else if (result.isDenied) {
                     console.log("ending game");
+                    localStorage.clear();
+                    window.location.href = "/";
                   }
                 });
               this.$store.state.isLoading = false;
