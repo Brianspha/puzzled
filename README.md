@@ -7,6 +7,30 @@ This is a silly POC ERC20 puzzle solving game, the aim is to complete each of th
 ![plot](./screenshots/1.png)
 ![plot](./screenshots/2.png)
 ![plot](./screenshots/3.png)
+2. Player clicks on play and is prompted to accept the 500 PTokens cost of playing the game
+![plot](./screenshots/4.png)
+![plot](./screenshots/5.png)
+![plot](./screenshots/6.png)
+
+3. Once Transactions have been confirmed the player is then taken to the game view where they will have to complete the puzzle in a given amount of time and score which is used as a reward for completing the level the only trick here is the score starts from a maximum and decreases with time so its the users task to ensure they get the highest score for maximum rewards
+![plot](./screenshots/7.png)
+4. The players scores are recorded and stored on the skynet blockchain 
+![plot](./screenshots/8.png)
+5. A user can add more time should they wish to do so but the time will cost PTokens
+![plot](./screenshots/9.png)
+
+6. At the end of the session the user can either choose to continue or cashout their score in the form of PTokens
+![plot](./screenshots/10.png)
+7. A users play session is recored and stored on the Leaderboard so other players can watch how a player completed a level
+
+![plot](./screenshots/11.png)
+![plot](./screenshots/12.png)
+![plot](./screenshots/13.png)
+
+
+
+
+
 
 ## Project setup
 ```
