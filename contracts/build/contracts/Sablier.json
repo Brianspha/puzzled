@@ -837,13 +837,13 @@
       "signature": "0xca3e6079b726e7728802a0537949e2d1c7762304fa641fb06eb56daf2ba8c6b9"
     }
   ],
-  "deployedAddress": "0x26012EE2267b9a5BDC359AA9eE46deF9315D14eD",
+  "deployedAddress": "0x3D74A8089c7e83017d2CAF679C1f5c14e43e0b4D",
   "className": "Sablier",
   "args": [
-    "0x60C70FF7B14c440c17792f98c8Fc6acd6709e853"
+    "0x20dE8D367CCd46342aAF733D7FB9BFBf55E6e508"
   ],
-  "gas": 4653401,
-  "gasPrice": "20000000000",
+  "gas": 4638939,
+  "gasPrice": "9999999999",
   "silent": false,
   "track": true,
   "deploy": true,
@@ -929,6 +929,6 @@
   "originalFilename": "contracts/Sablier.sol",
   "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/Sablier.sol",
   "type": "file",
-  "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0",
-  "transactionHash": "0xc4c4b251bad83eee62dbb2577b5d9773d5d28d2f3af20543eb360f28dd19b268"
+  "deploymentAccount": "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f6",
+  "transactionHash": "0x5ccf539ae5e085bfaf63b204a6fb1301c4559a63600162dd05364effa584769e"
 }

@@ -1,13 +1,11 @@
 {
   "abiDefinition": [],
-  "deployedAddress": "0xf3469b5b3AC43EA38A1c92dbFC24FFF3A80Dd6E2",
   "className": "Roles",
   "args": [],
-  "gas": 75565,
-  "gasPrice": "20000000000",
+  "gas": "auto",
   "silent": false,
   "track": true,
-  "deploy": true,
+  "deploy": false,
   "realRuntimeBytecode": "73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723058204293dca04f4c8edf01",
   "realArgs": [],
   "code": "60556023600b82828239805160001a607314601657fe5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea265627a7a723058204293dca04f4c8edf015345c335dd4e22b6d8865523ae768e5df5b8d48296b2f664736f6c634300050a0032",
@@ -31,6 +29,5 @@
   "originalFilename": "contracts//Users/powerbite/Documents/Github/puzzled/contracts/.embark/node_modules/@openzeppelin/contracts-ethereum-package/contracts/access/Roles.sol",
   "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/.embark/node_modules/@openzeppelin/contracts-ethereum-package/contracts/access/Roles.sol",
   "type": "file",
-  "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0",
-  "transactionHash": "0xc10d60f82b267efe70e1bde9a46abddb58708a9f21ec086f70e6b35b0c71b6d5"
+  "deploymentAccount": "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f6"
 }

@@ -61,11 +61,11 @@
       "signature": "0x228e8c246912b47fdd3ab77bdd5911c5398935328b3138fa60bb1e88546bb22f"
     }
   ],
-  "deployedAddress": "0x2Af5dd9724243D0b6AB823E993adba51F87387DE",
+  "deployedAddress": "0xE593AE2B480B645680c04F18cD2a02E0d5468138",
   "className": "Amazeng",
   "args": [],
-  "gas": 401399,
-  "gasPrice": "20000000000",
+  "gas": 379044,
+  "gasPrice": "9999999999",
   "silent": false,
   "track": true,
   "deploy": true,
@@ -98,6 +98,6 @@
   "originalFilename": "contracts/Amazeng.sol",
   "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/Amazeng.sol",
   "type": "file",
-  "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0",
-  "transactionHash": "0x902995174bca8fc6c39c829e61ec191317d482db3e5f9e81901a4eaf62dbfb62"
+  "deploymentAccount": "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f6",
+  "transactionHash": "0x8af0f73f66dc09eee8de513203cb3f24cfbca49ba6d8e98a380723310f8f1169"
 }

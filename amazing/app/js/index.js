@@ -1288,7 +1288,7 @@ function showCompatibilityError() {
   swal
     .fire({
       title:
-        "Game is not playable on current network selected on metamask please switch to the Binance Smart Chain network",
+        "Game is not playable on current network selected on metamask please switch to the Goerli Test Network",
       confirmButtonText: `Close`,
     })
     .then((result) => {
@@ -1296,12 +1296,13 @@ function showCompatibilityError() {
     });
 }
 web3.eth.net.getId((err, netId) => {
-  switch (netId) {
-    case "80001":
+  switch (netId.toString()) {
+    case "5":
       console.log("This is matic");
       break;
     default:
       console.log("in default");
+      showCompatibilityError()
   }
 });
 document.addEventListener("contextmenu", function(e) {

@@ -1,13 +1,11 @@
 {
   "abiDefinition": [],
-  "deployedAddress": "0xF3af4cFC2192851Ad334d298Bf2E5a3C81976996",
   "className": "CarefulMath",
   "args": [],
-  "gas": 71311,
-  "gasPrice": "20000000000",
+  "gas": "auto",
   "silent": false,
   "track": true,
-  "deploy": true,
+  "deploy": false,
   "realRuntimeBytecode": "6080604052600080fdfea265627a7a72305820d4245c93c85524a72f",
   "realArgs": [],
   "code": "6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72305820d4245c93c85524a72ffb031552eedbc466aa535d36cab3583c153e13707047d564736f6c634300050a0032",
@@ -33,6 +31,5 @@
   "originalFilename": "contracts/shared-contracts/compound/CarefulMath.sol",
   "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/shared-contracts/compound/CarefulMath.sol",
   "type": "file",
-  "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0",
-  "transactionHash": "0xfe2c450160c0b8cba0ed7a2aefe4ced8a7f20c313c388499a2e70a506bead011"
+  "deploymentAccount": "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f6"
 }

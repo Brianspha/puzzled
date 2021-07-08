@@ -142,13 +142,13 @@
       "signature": "0x7e8db23521d680875985525ec0b82266feb342fe0fd3fc23c591f1348ee3fe68"
     }
   ],
-  "deployedAddress": "0x8Dbba57690D928aD8949C5C2F8B15A5ba3eeb610",
+  "deployedAddress": "0x3acAc7Db46B279600040992b2553CFa3D8E8fa20",
   "className": "TournamentContract",
   "args": [
-    "0xF3e4bD640c06aa25F44163A13c9604a50749da04"
+    "0x40b251285C005BD27A6fFcB2ed935E3c3c6F7558"
   ],
-  "gas": 696976,
-  "gasPrice": "20000000000",
+  "gas": 693352,
+  "gasPrice": "9999999999",
   "silent": false,
   "track": true,
   "deploy": true,
@@ -187,6 +187,6 @@
   "originalFilename": "contracts/TournamentContract.sol",
   "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/TournamentContract.sol",
   "type": "file",
-  "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0",
-  "transactionHash": "0x584b446b6695d47f25d5028d8b13ab454c256524dd3d3810dc963fcfd7f98884"
+  "deploymentAccount": "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f6",
+  "transactionHash": "0xb2651d87520d28f4bd35ed4a20046f46f8453685e4ff036bafd33cdb339d3075"
 }

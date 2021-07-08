@@ -1,13 +1,11 @@
 {
   "abiDefinition": [],
-  "deployedAddress": "0x647AC507eB1Bd8709c09B35384fC15769Ed80Ec3",
   "className": "Exponential",
   "args": [],
-  "gas": 67934,
-  "gasPrice": "20000000000",
+  "gas": "auto",
   "silent": false,
   "track": true,
-  "deploy": true,
+  "deploy": false,
   "realRuntimeBytecode": "6080604052600080fdfea265627a7a72305820f24ff2bcd1aa30ea30",
   "realArgs": [],
   "code": "6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72305820f24ff2bcd1aa30ea307df93780341abf2ad4050f49e70d397562cbc522f54af864736f6c634300050a0032",
@@ -46,6 +44,5 @@
   "originalFilename": "contracts/shared-contracts/compound/Exponential.sol",
   "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/shared-contracts/compound/Exponential.sol",
   "type": "file",
-  "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0",
-  "transactionHash": "0xb87b784d46848e578b0bb5dbcaa60608075c807bcb40ddb50d804a81334f897c"
+  "deploymentAccount": "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f6"
 }

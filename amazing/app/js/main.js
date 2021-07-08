@@ -200,5 +200,5 @@ function showWarning(message) {
 }
 
 showWarning(
-  "Please note that the game is only playable if you have test eth only on the Polygon Network see **About** option in Game menu for more information"
+  "Please note that the game is only playable if you have test eth only on the Goerli Test Network or  see **About** option in Game menu for more information"
 );

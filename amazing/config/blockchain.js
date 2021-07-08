@@ -28,6 +28,7 @@ module.exports = {
   },
   matic: {
     endpoint: process.env.MATIC_PROVIDER_URL,
+    rpcHost: process.env.MATIC_PROVIDER_URL,
     accounts: [
       {
         privateKey: process.env.P_KEY_GOERLI

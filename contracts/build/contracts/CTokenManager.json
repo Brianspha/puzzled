@@ -163,11 +163,11 @@
       "signature": "0x6b059312af62bbe5ac6a9a59761eaf444083ad356cdbf3761bc98857e061ecb5"
     }
   ],
-  "deployedAddress": "0x60C70FF7B14c440c17792f98c8Fc6acd6709e853",
+  "deployedAddress": "0x20dE8D367CCd46342aAF733D7FB9BFBf55E6e508",
   "className": "CTokenManager",
   "args": [],
-  "gas": 463237,
-  "gasPrice": "20000000000",
+  "gas": 465731,
+  "gasPrice": "9999999999",
   "silent": false,
   "track": true,
   "deploy": true,
@@ -206,6 +206,6 @@
   "originalFilename": "contracts/CTokenManager.sol",
   "path": "/Users/powerbite/Documents/Github/puzzled/contracts/contracts/CTokenManager.sol",
   "type": "file",
-  "deploymentAccount": "0xcf5b4e30bC1aD46DDb6B593b427A457AF449e0f0",
-  "transactionHash": "0x64ab1907bb62cb5e29d2430e06e1c55dd531fbca716fb8321358c647b4cf4b08"
+  "deploymentAccount": "0xbd6581FBDc3d3f42B44A1f1416ee5c2a5B7b85f6",
+  "transactionHash": "0xd9db20126da276e16cb4d3ded9d373333e5704d33a5805003ad8d2cfe9979a63"
 }

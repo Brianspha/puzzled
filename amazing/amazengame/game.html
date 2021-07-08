@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <!-- partial:index.partial.html -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="body">
+    <section>
+      <div id="gradient"></div>
+      <div id="page">
+        <section>
+          <div id="menu">
+            <div class="custom-select">
+              <h2></h2>
+            </div>
+            <div class="custom-select">
+              <h2 id="level"></h2>
+            </div>
+            <div class="custom-select">
+              <h2></h2>
+            </div>
+            <div class="custom-select">
+              <h2 id="time"></h2>
+            </div>
+            <div class="custom-select">
+                <h2 class="hidden" id="timeCollected"></h2>
+              </div>
+              <div class="custom-select">
+                <h2 class="hidden" id="tokensCollected"></h2>
+              </div>
+            <br />
+            <br />
+            <button id="button">End Game</button>
+          </div>
+        </section>
+        <div id="view">
+          <br />
+
+          <div id="mazeContainer">
+            <canvas
+              id="mazeCanvas"
+              class="border"
+              height="1100"
+              width="1100"
+            ></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

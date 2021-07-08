@@ -48,6 +48,18 @@ Solve as many maze puzzle whislt also fighting against time and collecting PToke
 ![plot](./screenshots/20.png)
 ![plot](./screenshots/21.png)
 
+
+### Contract Deployed (Goerli/Matic)
+1. Amazeng- 0xE593AE2B480B645680c04F18cD2a02E0d5468138
+2. TournamentContract - 0x3acAc7Db46B279600040992b2553CFa3D8E8fa20
+3. TokenContract - 0x40b251285C005BD27A6fFcB2ed935E3c3c6F7558
+4. Sablier -  0x3D74A8089c7e83017d2CAF679C1f5c14e43e0b4D
+
+### Deployed Sites
+
+1. Puzzled - 
+
+
 ## Project setup
 ```
 yarn install

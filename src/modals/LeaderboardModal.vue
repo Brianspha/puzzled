@@ -229,9 +229,7 @@ export default {
     init: async function() {
       var test = await this.getSkyData();
       console.log("player data: ", test);
-      if (!test.data) {
-        this.$store.dispatch("warning", "No Players have played the game");
-      } else {
+      if (test.data) {
         var data = test.data.players;
         data.map((player) => {
           switch (player.level) {

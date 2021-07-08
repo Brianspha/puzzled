@@ -140,54 +140,55 @@ export default {
     },
     init: async function() {
       let _this = this;
-      EmbarkJS.onReady(async (error) => {
-        var accounts = await require("../contracts/embarkArtifacts/embarkjs").default.enableEthereum();
-        console.log("accounts; ", accounts);
-        this.$store.state.userAddress = accounts[0];
-        if (typeof ethereum !== "undefined") {
-          // Supports EIP-1102 injected Ethereum providers.
-          window.web3 = new Web3(ethereum);
-          console.log("in 1st if");
-        } else if (typeof web3 !== "undefined") {
-          console.log("in 2nd if");
-          // Supports legacy injected Ethereum providers.
-          window.web3 = new Web3(web3.currentProvider);
-        } else {
-          // Your preferred fallback.
-          console.log("in 3rd if");
-          window.web3 = new Web3(
-            new Web3.providers.HttpProvider("http://localhost:8546")
-          );
+      window.web3.eth.net.getId((err, netId) => {
+        console.log("netId: ", netId);
+        /**/ switch (netId.toString()) {
+          case "5":
+            EmbarkJS.onReady(async (error) => {
+              var accounts = await require("../contracts/embarkArtifacts/embarkjs").default.enableEthereum();
+              console.log("accounts; ", accounts);
+              this.$store.state.userAddress = accounts[0];
+              if (typeof ethereum !== "undefined") {
+                // Supports EIP-1102 injected Ethereum providers.
+                window.web3 = new Web3(ethereum);
+                console.log("in 1st if");
+              } else if (typeof web3 !== "undefined") {
+                console.log("in 2nd if");
+                // Supports legacy injected Ethereum providers.
+                window.web3 = new Web3(web3.currentProvider);
+              } else {
+                // Your preferred fallback.
+                console.log("in 3rd if");
+                window.web3 = new Web3(
+                  new Web3.providers.HttpProvider("http://localhost:8546")
+                );
+              }
+              window.ethereum.on("accountsChanged", function(accounts) {
+                _this.$store.state.userAddress = accounts[0];
+                _this.$router.replace({ path: "/" });
+                window.location.href = "/";
+              });
+              window.ethereum.on("networkChanged", function(netId) {
+                _this.$store.state.userAddress = accounts[0];
+                _this.$router.replace({ path: "/" });
+                window.location.href = "/";
+              });
+            });
+
+            break;
+          default:
+            require("sweetalert2")
+              .fire({
+                title:
+                  "Incompatible network detected please switch to the Goerli Test network",
+                confirmButtonText: `Close`,
+              })
+              .then((result) => {
+                localStorage.clear();
+                window.location.reload();
+              });
+            break;
         }
-        window.web3.eth.net.getId((err, netId) => {
-          console.log("netId: ", netId);
-          /*switch (netId) {
-            case 3:
-              console.log("this is ropsten");
-              break;
-            default:
-              require("sweetalert2")
-                .fire({
-                  title:
-                    "Incompatible network detected please switch to the ropsten test network",
-                  confirmButtonText: `Close`,
-                })
-                .then((result) => {
-                  window.location.reload();
-                });
-              break;
-          }*/
-        });
-        window.ethereum.on("accountsChanged", function(accounts) {
-          _this.$store.state.userAddress = accounts[0];
-          _this.$router.replace({ path: "/" });
-          window.location.href = "/";
-        });
-        window.ethereum.on("networkChanged", function(netId) {
-          _this.$store.state.userAddress = accounts[0];
-          _this.$router.replace({ path: "/" });
-          window.location.href = "/";
-        });
       });
     },
   },
