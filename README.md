@@ -57,7 +57,8 @@ Solve as many maze puzzle whislt also fighting against time and collecting PToke
 
 ### Deployed Sites
 
-1. Puzzled - 
+1. Puzzled - https://brianspha.github.io/puzzledgame/
+2. Amazeng - https://brianspha.github.io/amazenggame/
 
 
 ## Project setup
