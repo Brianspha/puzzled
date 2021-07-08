@@ -36,15 +36,17 @@ These tokens can also be used to play Amazeng the other game part of this submis
 
 ### How it works Amazeng
 Simple POC Blockchain Based Maze Solving Game integrated with Sablier Protocol
-### Demo
 
-1. Gif version
-![Gif](https://siasky.net/AABz2QLd6A-6GrEtX_Xj7IcnaH_HLOFI_3GtAZyZajQAaQ)
-   
-
-2. Video Demo (Click image to view)
-
-[![Demo Doccou alpha](https://siasky.net/_ABwZ0XtL0hWJplNHC0uinluB58zspfrKZ40z5oWaXQ0Jw)](https://siasky.net/AACskXDjLXKfEZpeGb0z-0vpkHCgiH2qteSiHAEPgMKMGQ)
+Solve as many maze puzzle whislt also fighting against time and collecting PTokens to be streamed to you by the end of the game
+### Amazeng screenshots
+![plot](./screenshots/14.png)
+![plot](./screenshots/15.png)
+![plot](./screenshots/16.png)
+![plot](./screenshots/17.png)
+![plot](./screenshots/18.png)
+![plot](./screenshots/19.png)
+![plot](./screenshots/20.png)
+![plot](./screenshots/21.png)
 
 ## Project setup
 ```
