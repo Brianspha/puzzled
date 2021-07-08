@@ -7,12 +7,10 @@ let initialAmount = new bigNumber(991112121212111231190990211212).toFixed();
 module.exports = {
   // default applies to all environments
   default: {
+    library: "embarkjs", // can also be 'web3'
+
     // order of connections the dapp should connect to
-    dappConnection: [
-      "$WEB3", // uses pre existing web3 object if available (e.g in Mist)
-      "ws://localhost:8546",
-      "http://localhost:8545",
-    ],
+    dappConnection: ["$WEB3"],
 
     // Automatically call `ethereum.enable` if true.
     // If false, the following code must run before sending any transaction: `await EmbarkJS.enableEthereum();`
@@ -33,91 +31,11 @@ module.exports = {
     // Using filteredFields lets you customize which field you want to filter out of the contract file (requires minimalContractSize: true)
     // minimalContractSize: false,
     // filteredFields: [],
-
-    deploy: {
-      CTokenManager: {
-        args: [],
-      },
-      Sablier: {
-        deps: ["ERC20"],
-        args: ["$CTokenManager"],
-      },
-      Amazeng: {
-        deps: ["ERC20", "Sablier"],
-      },
-      ERC20: {
-        args: ["PT", "PToken", 18, initialAmount],
-      },
-      TournamentContract: {
-        args: ["$ERC20"],
-        deps: ["ERC20", "Amazeng"],
-      },
-    },
-    afterDeploy: async (deps) => {
-      console.log("deps.contracts.TournamentContract.options.address: ",deps.contracts.TournamentContract.options.address)
-      await deps.contracts.ERC20.methods
-        .approve(
-          deps.contracts.TournamentContract.options.address,
-          new bigNumber(
-            new bigNumber(
-              new bigNumber(991112121212111231190990211212).toFixed()
-            ).dividedBy(2)
-          ).toFixed()
-        )
-        .send({
-          gas: 800000,
-        });
-      await deps.contracts.ERC20.methods
-        .transfer(
-          deps.contracts.TournamentContract.options.address,
-          new bigNumber(
-            new bigNumber(
-              new bigNumber(991112121212111231190990211212).toFixed()
-            ).dividedBy(2)
-          ).toFixed()
-        )
-        .send({
-          gas: 800000,
-        });
-      console.log("deployed contract!!!");
-      console.log("contracts: ", web3.eth.defaultAccount);
-      await deps.contracts.Amazeng.methods
-        .init(
-          deps.contracts.ERC20.options.address,
-          deps.contracts.Sablier.options.address
-        )
-        .send({
-          gas: 800000,
-        });
-      await deps.contracts.ERC20.methods
-        .approve(
-          deps.contracts.Amazeng.options.address,
-          new bigNumber(
-            new bigNumber(
-              new bigNumber(991112121212111231190990211212).toFixed()
-            ).dividedBy(2)
-          ).toFixed()
-        )
-        .send({
-          gas: 800000,
-        });
-      await deps.contracts.ERC20.methods
-        .transfer(
-          deps.contracts.Amazeng.options.address,
-          new bigNumber(
-            new bigNumber(
-              new bigNumber(991112121212111231190990211212).toFixed()
-            ).dividedBy(2)
-          ).toFixed()
-        )
-        .send({
-          gas: 800000,
-        });
-      console.log("approved Amazeng contract...");
-    },
+    strategy: 'explicit',
+    deploy: {},
   },
   matic: {
-    gas: "6000000",
+    strategy: 'explicit',
     strategy: "explicit",
     deploy: {
       CTokenManager: {
@@ -139,7 +57,7 @@ module.exports = {
       },
     },
     afterDeploy: async (deps) => {
-      console.log("deps.contracts.TournamentContract.options.address: ",deps.contracts.TournamentContract.options.address)
+      console.log("contracts: ", web3.eth.defaultAccount);
       await deps.contracts.ERC20.methods
         .approve(
           deps.contracts.TournamentContract.options.address,
@@ -150,8 +68,10 @@ module.exports = {
           ).toFixed()
         )
         .send({
-          gas: 800000,
+          gas: 500000,
+          from:web3.eth.defaultAccount
         });
+        console.log("contracts1: ", web3.eth.defaultAccount);
       await deps.contracts.ERC20.methods
         .transfer(
           deps.contracts.TournamentContract.options.address,
@@ -162,17 +82,18 @@ module.exports = {
           ).toFixed()
         )
         .send({
-          gas: 800000,
+          gas: 500000,
+          from:web3.eth.defaultAccount
         });
       console.log("deployed contract!!!");
-      console.log("contracts: ", web3.eth.defaultAccount);
       await deps.contracts.Amazeng.methods
         .init(
           deps.contracts.ERC20.options.address,
           deps.contracts.Sablier.options.address
         )
         .send({
-          gas: 800000,
+          gas: 500000,
+          from:web3.eth.defaultAccount
         });
       await deps.contracts.ERC20.methods
         .approve(
@@ -184,7 +105,8 @@ module.exports = {
           ).toFixed()
         )
         .send({
-          gas: 800000,
+          gas: 500000,
+          from:web3.eth.defaultAccount
         });
       await deps.contracts.ERC20.methods
         .transfer(
@@ -196,7 +118,8 @@ module.exports = {
           ).toFixed()
         )
         .send({
-          gas: 800000,
+          gas: 500000,
+          from:web3.eth.defaultAccount
         });
       console.log("approved Amazeng contract...");
     },

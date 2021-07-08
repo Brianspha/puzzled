@@ -1,5 +1,7 @@
 // This file contains only the basic configuration you need to run Embark's node
 // For additional configurations, see: https://framework.embarklabs.io/docs/blockchain_configuration.html
+require("dotenv").config({ path: "./vars/vars.env" });
+
 module.exports = {
   // default applies to all environments
   default: {
@@ -69,6 +71,14 @@ module.exports = {
         nodeAccounts: true,
         password: "config/livenet/password"
       }
+    ]
+  },
+  matic: {
+    endpoint: process.env.MATIC_PROVIDER_URL,
+    accounts: [
+      {
+        privateKey: process.env.PRIVATE_KEY
+      },
     ]
   }
 
